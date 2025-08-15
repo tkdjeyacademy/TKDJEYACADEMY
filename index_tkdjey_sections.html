@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TKD JEY · Taekwondo Academy</title>
+<meta name="description" content="Única academia internacional de Taekwondo con sede en EEUU. Clases desde los 3 años, After School, programas antibullying, y Winter & Summer Camps en USA.">
+<style>
+  :root{--bg:#0b1220;--fg:#eaf0fc;--muted:#a7b3c7;--accent:#52e0d2;--card:#0f1d38;--line:#1b2d52}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:var(--bg);color:var(--fg)}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  header{position:sticky;top:0;background:rgba(11,18,32,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  .container{max-width:1150px;margin:0 auto;padding:18px 24px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .menu{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--accent);color:#03131a;font-weight:800}
+  .btn.outline{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  /* logo */
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo svg{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:#091226}
+  .brand{font-weight:900;letter-spacing:.3px}
+  /* hero */
+  .hero{position:relative;min-height:72vh;display:grid;place-items:center;padding:24px;overflow:hidden;
+        background:radial-gradient(1200px 600px at 80% -10%, rgba(82,224,210,.15), transparent),
+                   radial-gradient(1000px 500px at 10% -10%, rgba(82,224,210,.15), transparent);}
+  .hero-bg{position:absolute;inset:0;opacity:.25;background-position:center;background-size:cover;background-repeat:no-repeat;filter:saturate(1.05) contrast(1.05) brightness(.92)}
+  .card{position:relative;max-width:820px;width:100%;background:rgba(15,29,56,.82);border:1px solid var(--line);border-radius:20px;padding:24px}
+  .tag{display:inline-block;font-size:12px;letter-spacing:.4px;text-transform:uppercase;background:#0c1a33;border:1px solid #18305c;color:#9ee6dc;padding:6px 10px;border-radius:999px;margin-bottom:14px}
+  h1{font-size:40px;line-height:1.1;margin:0 0 10px 0}
+  h2{margin:0 0 10px 0}
+  @media (max-width: 720px){ h1{font-size:32px} .menu{display:none} }
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  /* sections */
+  section{padding:34px 0}
+  .grid{display:grid;gap:18px}
+  .cols{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+  .programs{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .program{padding:16px;border-radius:16px;background:linear-gradient(180deg,#102142,#0b1a33);border:1px solid var(--line)}
+  .check li::before{content:'✓ ';color:var(--accent);font-weight:900}
+  footer{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;color:var(--muted);font-size:14px}
+  .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#0c1b35;color:#9fded6;font-size:12px;margin:4px 6px 0 0}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <!-- Inline SVG logo (simple) -->
+        <svg viewBox="0 0 120 120" aria-label="Logo TKD JEY">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#52e0d2"/><stop offset="1" stop-color="#1aa39b"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="100" height="100" rx="16" ry="16" fill="url(#g)" opacity="0.2" stroke="#52e0d2"/>
+          <text x="60" y="70" text-anchor="middle" font-size="36" font-family="system-ui,Segoe UI,Roboto" fill="#52e0d2" font-weight="900">TJ</text>
+        </svg>
+        <div class="brand">TKD JEY · Taekwondo Academy</div>
+      </div>
+      <nav class="menu">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#programas">Programas</a>
+        <a href="#sedes">Sedes</a>
+        <a href="#equipo">Equipo</a>
+        <a class="btn outline" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO con fondo (puedes pegar tu foto en la constante HERO_URL al final) -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="card">
+      <span class="tag">Única academia internacional con sede en EEUU</span>
+      <h1>Taekwondo para niños, jóvenes y adultos</h1>
+      <p>Especialistas en clases para niños desde los 3 años. After School y <strong>Winter & Summer Camps</strong> en USA.</p>
+      <div class="badges">
+        <span class="tag">Clases en Inglés y Español</span>
+        <span class="tag">Antibullying</span>
+        <span class="tag">Masters certificados USA & Korea</span>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:14px">
+        <a class="btn" href="#programas">Ver Programas</a>
+        <a class="btn outline" href="#contacto">Inscripciones</a>
+      </div>
+      <div style="margin-top:14px">
+        <span class="pill">Instagram @tkdjey</span>
+        <span class="pill">TikTok @tkdjey_usa</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="grid">
+      <div class="box">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos la <strong>Academia Internacional de Taekwondo TKD JEY</strong>, con maestros certificados en USA y Corea. Aplicamos <em>Psicotraining</em> y biomecánica al Taekwondo, con enfoque en Taekwondo Olímpico y Tradicional.</p>
+      </div>
+      <div class="box">
+        <h3>Certificaciones & Afiliaciones</h3>
+        <div>
+          <span class="pill">Kukkiwon</span>
+          <span class="pill">WTA</span>
+          <span class="pill">TKD JEY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAS -->
+    <section id="programas" class="grid">
+      <h2>Programas</h2>
+      <div class="box">
+        <ul class="check">
+          <li>After School</li>
+          <li>Somos especialistas en clases para niños desde los 3 años</li>
+          <li>Clases en inglés y español</li>
+          <li>Winters y Summer Camps en USA</li>
+          <li>Masters certificados en USA y Korea</li>
+          <li>Programas antibullying</li>
+        </ul>
+      </div>
+      <div class="grid programs">
+        <div class="program"><h3>Pequeños Guerreros (3–6 años)</h3><p>Juego, disciplina y coordinación.</p></div>
+        <div class="program"><h3>Kids & Teens (7–15 años)</h3><p>Técnica, valores y crecimiento competitivo.</p></div>
+        <div class="program"><h3>Adultos & Familia</h3><p>Defensa personal y entrenamiento en familia.</p></div>
+        <div class="program"><h3>Alto Rendimiento</h3><p>Biomecánica y Psicotraining para atletas.</p></div>
+        <div class="program"><h3>After School</h3><p>Refuerzo de hábitos, tareas y Taekwondo.</p></div>
+        <div class="program"><h3>Camps en USA</h3><p>Entrenamiento intensivo y experiencias internacionales.</p></div>
+      </div>
+    </section>
+
+    <!-- SEDES -->
+    <section id="sedes" class="grid">
+      <h2>Sedes</h2>
+      <div class="cols">
+        <div class="box">
+          <h3>Santa Cruz, Bolivia</h3>
+          <p>Av. San Martín, Shopping Fidalga de Equipetrol, Piso 3.</p>
+          <p><a target="_blank" rel="noopener" href="https://maps.google.com/?q=Shopping%20Fidalga%20Equipetrol%20Santa%20Cruz%20Bolivia">Ver en Google Maps</a></p>
+        </div>
+        <div class="box">
+          <h3>Florida, USA</h3>
+          <p>8408 NW 17th St, Doral, FL.</p>
+          <p><a target="_blank" rel="noopener" href="https://maps.google.com/?q=8408%20NW%2017th%20St%2C%20Doral%2C%20FL">Ver en Google Maps</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="grid">
+      <h2>Nuestro Equipo</h2>
+      <div class="cols">
+        <div class="box">
+          <h3>Master Jey Marcano</h3>
+          <p>Black belt 7º Dan Taekwondo WT · Black belt 5º Dan Taekwondo ITF.</p>
+          <p>Master en Biomecánica y ciencias aplicadas a los deportes de combate.</p>
+        </div>
+        <div class="box">
+          <h3>Master Raquel Tueti</h3>
+          <p>Black belt 5º Dan Taekwondo WT · Master en Psicopedagogía.</p>
+          <p>Creadora del programa Manejo de Emociones y Psicotraining (alto rendimiento). Asesora y coaching psicopedagógico de la FBT.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="grid">
+      <h2>Inscripciones y Contacto</h2>
+      <div class="cols">
+        <div class="box">
+          <h3>Escríbenos</h3>
+          <p><strong>Correo:</strong> <a href="mailto:tkdjey@gmail.com">tkdjey@gmail.com</a></p>
+          <p><strong>Instagram:</strong> <a target="_blank" rel="noopener" href="https://instagram.com/tkdjey">@tkdjey</a></p>
+          <p><strong>TikTok:</strong> <a target="_blank" rel="noopener" href="https://www.tiktok.com/@tkdjey_usa">@tkdjey_usa</a></p>
+        </div>
+        <div class="box">
+          <h3>Visítanos</h3>
+          <p><strong>Santa Cruz, Bolivia:</strong> Av. San Martín, Shopping Fidalga de Equipetrol, Piso 3.</p>
+          <p><strong>Florida, USA:</strong> 8408 NW 17th St, Doral, FL.</p>
+        </div>
+      </div>
+      <footer>
+        <p>© <span id="year"></span> TKD JEY Taekwondo Academy · Todos los derechos reservados.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // HERO background: pega la URL pública de tu foto aquí (JPG/PNG). Si no pones nada, se queda el fondo abstracto.
+    const HERO_URL = ''; // <-- Pega aquí la URL de tu foto
+    if (HERO_URL) document.getElementById('heroBg').style.backgroundImage = `url('${HERO_URL}')`;
+  </script>
+</body>
+</html>
